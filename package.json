@@ -35,6 +35,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/array-base-arraylike2object": "^0.0.x",
     "@stdlib/array-float64": "^0.0.x",
     "@stdlib/assert-has-iterator-symbol-support": "^0.0.x",
     "@stdlib/assert-is-array": "^0.0.x",
@@ -50,11 +51,24 @@
     "@stdlib/complex-real": "^0.0.x",
     "@stdlib/math-base-assert-is-even": "^0.0.x",
     "@stdlib/math-base-assert-is-integer": "^0.0.x",
+    "@stdlib/strided-base-reinterpret-complex128": "^0.0.x",
+    "@stdlib/strided-base-reinterpret-complex64": "^0.0.x",
     "@stdlib/symbol-iterator": "^0.0.x",
     "@stdlib/types": "^0.0.x",
-    "@stdlib/utils-define-property": "^0.0.x"
+    "@stdlib/utils-define-nonenumerable-read-only-accessor": "^0.0.x",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.x"
   },
   "devDependencies": {
+    "@stdlib/array-buffer": "^0.0.x",
+    "@stdlib/array-complex64": "^0.0.x",
+    "@stdlib/assert-has-own-property": "^0.0.x",
+    "@stdlib/assert-is-complex128": "^0.0.x",
+    "@stdlib/assert-is-negative-zero": "^0.0.x",
+    "@stdlib/assert-is-positive-zero": "^0.0.x",
+    "@stdlib/complex-float32": "^0.0.x",
+    "@stdlib/complex-imagf": "^0.0.x",
+    "@stdlib/complex-realf": "^0.0.x",
+    "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-spec": "5.x.x"
