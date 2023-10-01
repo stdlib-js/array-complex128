@@ -70,7 +70,7 @@
     "@stdlib/complex-float32": "^0.1.0",
     "@stdlib/complex-imagf": "^0.1.0",
     "@stdlib/complex-realf": "^0.1.0",
-    "@stdlib/console-log-each": "^0.0.2",
+    "@stdlib/console-log-each": "^0.1.0",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
