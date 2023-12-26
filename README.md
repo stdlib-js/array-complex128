@@ -45,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-complex128
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-Complex128Array = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var Complex128Array = require( 'path/to/vendor/umd/array-complex128/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.Complex128Array;
-})();
-</script>
+var Complex128Array = require( '@stdlib/array-complex128' );
 ```
 
 <a name="constructor"></a>
@@ -967,6 +959,78 @@ var count = context.count;
 // returns 2
 ```
 
+<a name="method-find-last"></a>
+
+#### Complex64Array.prototype.findLast( predicate\[, thisArg] )
+
+Returns the last element in an array for which a predicate function returns a truthy value.
+
+```javascript
+var real = require( '@stdlib/complex-real' );
+var imag = require( '@stdlib/complex-imag' );
+
+function predicate( v ) {
+    return ( real( v ) === imag( v ) );
+}
+
+var arr = new Complex128Array( 3 );
+
+// Set the first three elements:
+arr.set( [ 1.0, 1.0 ], 0 );
+arr.set( [ 2.0, 2.0 ], 1 );
+arr.set( [ 3.0, 3.0 ], 2 );
+
+var z = arr.findLast( predicate );
+// returns <Complex128>
+
+var re = real( z );
+// returns 3.0
+
+var im = imag( z );
+// returns 3.0
+```
+
+The `predicate` function is provided three arguments:
+
+-   **value**: current array element.
+-   **index**: current array element index.
+-   **arr**: the array on which this method was called.
+
+To set the function execution context, provide a `thisArg`.
+
+```javascript
+var real = require( '@stdlib/complex-real' );
+var imag = require( '@stdlib/complex-imag' );
+
+function predicate( v, i ) {
+    this.count += 1;
+    return ( i >= 0 && real( v ) === imag( v ) );
+}
+
+var arr = new Complex128Array( 3 );
+
+var context = {
+    'count': 0
+};
+
+// Set the first three elements:
+arr.set( [ 1.0, -1.0 ], 0 );
+arr.set( [ 2.0, 2.0 ], 1 );
+arr.set( [ 3.0, -3.0 ], 2 );
+
+var z = arr.findLast( predicate, context );
+// returns <Complex128>
+
+var re = real( z );
+// returns 2.0
+
+var im = imag( z );
+// returns 2.0
+
+var count = context.count;
+// returns 2
+```
+
 <a name="method-get"></a>
 
 #### Complex128Array.prototype.get( i )
@@ -1228,16 +1292,11 @@ var count = context.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Complex128 = require( '@stdlib/complex-float64' );
+var Float64Array = require( '@stdlib/array-float64' );
+var logEach = require( '@stdlib/console-log-each' );
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 // Create a complex array by specifying a length:
 var out = new Complex128Array( 3 );
@@ -1266,11 +1325,6 @@ logEach( '%s', out );
 arr = new Float64Array( [ 1.0, -1.0, -3.14, 3.14, 0.5, 0.5 ] );
 out = new Complex128Array( arr.buffer, 16, 2 );
 logEach( '%s', out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -1370,17 +1424,17 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-complex128/main/LICENSE
 
-[@stdlib/array/typed]: https://github.com/stdlib-js/array-typed/tree/umd
+[@stdlib/array/typed]: https://github.com/stdlib-js/array-typed
 
-[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer/tree/umd
+[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64/tree/umd
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
 
 <!-- <related-links> -->
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/complex/cmplx]: https://github.com/stdlib-js/complex-cmplx/tree/umd
+[@stdlib/complex/cmplx]: https://github.com/stdlib-js/complex-cmplx
 
 <!-- </related-links> -->
 
