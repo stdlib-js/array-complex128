@@ -81,6 +81,7 @@
     "@stdlib/complex-imagf": "^0.2.1",
     "@stdlib/complex-realf": "^0.2.1",
     "@stdlib/console-log-each": "^0.2.0",
+    "@stdlib/math-base-ops-cadd": "^0.2.0",
     "@stdlib/math-base-special-pow": "^0.2.0",
     "@stdlib/utils-identity-function": "^0.2.1",
     "proxyquire": "^2.0.0",
