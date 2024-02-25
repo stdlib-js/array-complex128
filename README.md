@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-complex128/tags). For example,
+
+```javascript
 import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@v0.2.1-esm/index.mjs';
 ```
 
@@ -2253,7 +2258,7 @@ var im = imag( z );
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@esm/index.mjs';
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@v0.2.1-esm/index.mjs';
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
 
 // Create a complex array by specifying a length:
 var out = new Complex128Array( 3 );
