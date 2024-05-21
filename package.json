@@ -52,6 +52,7 @@
     "@stdlib/assert-is-nonnegative-integer": "^0.2.1",
     "@stdlib/assert-is-object": "^0.2.1",
     "@stdlib/assert-is-string": "^0.2.1",
+    "@stdlib/assert-is-string-array": "^0.2.1",
     "@stdlib/complex-float64": "^0.2.1",
     "@stdlib/complex-imag": "^0.2.1",
     "@stdlib/complex-real": "^0.2.1",
