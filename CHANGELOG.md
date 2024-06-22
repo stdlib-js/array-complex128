@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-06-05)
+## Unreleased (2024-06-22)
 
 <section class="features">
 
@@ -37,6 +37,7 @@
 
 <details>
 
+-   [`61c5609`](https://github.com/stdlib-js/stdlib/commit/61c5609ba30f3b07cd97089746a5dca25a614d94) - **docs:** fix examples in REPL documentation for complex number arrays [(#2431)](https://github.com/stdlib-js/stdlib/pull/2431) _(by Jaysukh Makvana)_
 -   [`f53180b`](https://github.com/stdlib-js/stdlib/commit/f53180b3c431857d7c918319da97bd8e3abcb216) - **fix:** add missing parameter _(by Athan Reines)_
 -   [`1cc1a57`](https://github.com/stdlib-js/stdlib/commit/1cc1a5727ea8a024c597d7c8bc724f027511da78) - **docs:** add `repl.txt` to `array/complex128` [(#2280)](https://github.com/stdlib-js/stdlib/pull/2280) _(by Jaysukh Makvana, Athan Reines)_
 -   [`3a3b1e0`](https://github.com/stdlib-js/stdlib/commit/3a3b1e08f73a54c5ee46d73045805aee0bb1196d) - **docs:** update package URLs [(##2269)](#2269) _(by stdlib-bot)_
