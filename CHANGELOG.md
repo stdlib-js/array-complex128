@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-07-01)
+## Unreleased (2024-07-07)
 
 <section class="features">
 
@@ -37,6 +37,7 @@
 
 <details>
 
+-   [`a78f7d1`](https://github.com/stdlib-js/stdlib/commit/a78f7d1b859b6b1d7b0bc0ee4daf76789e3e0910) - **style:** add missing spaces _(by Philipp Burckhardt)_
 -   [`6b0e763`](https://github.com/stdlib-js/stdlib/commit/6b0e763f6763fcad684f7cc82bb3300837dad71b) - **docs:** update example and add return description [(#2489)](https://github.com/stdlib-js/stdlib/pull/2489) _(by Jaysukh Makvana)_
 -   [`61c5609`](https://github.com/stdlib-js/stdlib/commit/61c5609ba30f3b07cd97089746a5dca25a614d94) - **docs:** fix examples in REPL documentation for complex number arrays [(#2431)](https://github.com/stdlib-js/stdlib/pull/2431) _(by Jaysukh Makvana)_
 -   [`f53180b`](https://github.com/stdlib-js/stdlib/commit/f53180b3c431857d7c918319da97bd8e3abcb216) - **fix:** add missing parameter _(by Athan Reines)_
