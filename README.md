@@ -316,7 +316,7 @@ The iterator returned by an iterable must return either a complex number or an a
 var ITERATOR_SYMBOL = require( '@stdlib/symbol-iterator' );
 var Float64Array = require( '@stdlib/array-float64' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var iter;
 var arr;
@@ -379,7 +379,7 @@ To invoke a function for each `src` value, provide a callback function. If `src`
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function map( z ) {
     return new Complex128( real(z)*2.0, imag(z)*2.0 );
@@ -411,7 +411,7 @@ or an array-like object containing real and imaginary components
 var Float64Array = require( '@stdlib/array-float64' );
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 // Return a callback which reuses allocated memory...
 function mapFcn() {
@@ -460,7 +460,7 @@ If `src` is an array-like object containing interleaved real and imaginary compo
 var Float64Array = require( '@stdlib/array-float64' );
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function map( v ) {
     return v * 2.0;
@@ -496,7 +496,7 @@ To set the callback execution context, provide a `thisArg`.
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function map( z ) {
     this.count += 1;
@@ -555,7 +555,7 @@ Returns an array element located at integer position (index) `i`, with support f
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -606,7 +606,7 @@ Copies a sequence of elements within the array starting at `start` and ending at
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 4 );
 
@@ -665,7 +665,7 @@ By default, `end` equals the number of array elements (i.e., one more than the l
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 4 );
 
@@ -724,7 +724,7 @@ When a `target`, `start`, and/or `end` index is negative, the respective index i
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 4 );
 
@@ -787,7 +787,7 @@ Returns an iterator for iterating over array key-value pairs.
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = [
     new Complex128( 1.0, -1.0 ),
@@ -839,7 +839,7 @@ Returns a boolean indicating whether all elements pass a test.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -898,7 +898,7 @@ Returns a modified typed array filled with a fill value.
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 3 );
 
@@ -971,7 +971,7 @@ When a `start` and/or `end` index is negative, the respective index is determine
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 3 );
 
@@ -1005,7 +1005,7 @@ Returns a new array containing the elements of an array which pass a test implem
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -1044,7 +1044,7 @@ To set the function execution context, provide a `thisArg`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v, i ) {
     this.count += 1;
@@ -1080,7 +1080,7 @@ Returns the first element in an array for which a predicate function returns a t
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -1113,7 +1113,7 @@ To set the function execution context, provide a `thisArg`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v, i ) {
     this.count += 1;
@@ -1152,7 +1152,7 @@ Returns the index of the first element in an array for which a predicate functio
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -1179,7 +1179,7 @@ To set the function execution context, provide a `thisArg`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v, i ) {
     this.count += 1;
@@ -1212,7 +1212,7 @@ Returns the last element in an array for which a predicate function returns a tr
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -1245,7 +1245,7 @@ To set the function execution context, provide a `thisArg`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v, i ) {
     this.count += 1;
@@ -1284,7 +1284,7 @@ Returns the index of the last element in an array for which a predicate function
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -1311,7 +1311,7 @@ To set the function execution context, provide a `thisArg`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v, i ) {
     this.count += 1;
@@ -1410,7 +1410,7 @@ Returns an array element located at position (index) `i`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1620,7 +1620,7 @@ Returns a new array with each element being the result of a provided callback fu
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function scale( v ) {
     return new Complex128( 2.0*real( v ), 2.0*imag( v ) );
@@ -1657,7 +1657,7 @@ To set the function execution context, provide a `thisArg`.
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function scale( v ) {
     this.count += 1;
@@ -1690,7 +1690,7 @@ Applies a provided callback function to each element of the array, in order, pas
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cadd = require( '@stdlib/math-base-ops-cadd' );
 
 var arr = new Complex128Array( 3 );
@@ -1744,7 +1744,7 @@ Applies a provided callback function to each element of the array, in reverse or
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cadd = require( '@stdlib/math-base-ops-cadd' );
 
 var arr = new Complex128Array( 3 );
@@ -1798,7 +1798,7 @@ Reverses an array in-place.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 3 );
 
@@ -1846,7 +1846,7 @@ Sets one or more array elements.
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1879,7 +1879,7 @@ By default, the method sets array elements starting at position (index) `i = 0`.
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1912,7 +1912,7 @@ In addition to providing a complex number, to set one or more array elements, pr
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1942,7 +1942,7 @@ or interleaved real and imaginary components
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1977,7 +1977,7 @@ Copies a portion of a typed array to a new typed array.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
@@ -2009,7 +2009,7 @@ im = imag( z );
 By default, the method returns a typed array beginning with the first array element. To specify an alternative array index at which to begin, provide a `start` index (inclusive).
 
 ```javascript
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var real = require( '@stdlib/complex-real' );
 
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
@@ -2034,7 +2034,7 @@ By default, the method returns a typed array which includes all array elements a
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
@@ -2071,7 +2071,7 @@ Returns a boolean indicating whether at least one element passes a test.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v ) {
     return ( real( v ) === imag( v ) );
@@ -2099,7 +2099,7 @@ To set the function execution context, provide a `thisArg`.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function predicate( v, i ) {
     this.count += 1;
@@ -2132,7 +2132,7 @@ Sorts an array in-place.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function compare( a, b ) {
     var re1;
@@ -2216,7 +2216,7 @@ Creates a new typed array view over the same underlying [`ArrayBuffer`][@stdlib/
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
@@ -2248,7 +2248,7 @@ im = imag( z );
 By default, the method creates a typed array view beginning with the first array element. To specify an alternative array index at which to begin, provide a `begin` index (inclusive).
 
 ```javascript
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var real = require( '@stdlib/complex-real' );
 
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
@@ -2273,7 +2273,7 @@ By default, the method creates a typed array view which includes all array eleme
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
@@ -2331,7 +2331,7 @@ Returns a new typed array containing the elements in reversed order.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 3 );
 
@@ -2378,7 +2378,7 @@ Returns a new typed array containing the elements in sorted order.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 function compare( a, b ) {
     var re1;
@@ -2479,7 +2479,7 @@ Returns an iterator for iterating over each value in a typed array.
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var arr = new Complex128Array( 2 );
 
 arr.set( [ 1.0, -1.0 ], 0 );
@@ -2522,7 +2522,7 @@ Returns a new typed array with the element at a provided index replaced with a p
 
 ```javascript
 var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var arr = new Complex128Array( 3 );
