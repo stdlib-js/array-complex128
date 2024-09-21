@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-15)
+## Unreleased (2024-09-21)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2faaf21`](https://github.com/stdlib-js/stdlib/commit/2faaf217eab865f9e40abbb0bf21b374595853e9) - **docs:** fix example _(by Athan Reines)_
 -   [`8d3352e`](https://github.com/stdlib-js/stdlib/commit/8d3352e666353624f97e95ee0805b7d641fc775a) - **fix:** add missing property _(by Athan Reines)_
 
 </details>
