@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-24)
+## Unreleased (2024-09-28)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`abf0407`](https://github.com/stdlib-js/stdlib/commit/abf040787f6598438b0100a729a8331b7f80f62f) - **chore:** resolve lint errors in TS files _(by Philipp Burckhardt)_
 -   [`8f72b43`](https://github.com/stdlib-js/stdlib/commit/8f72b432c0fc81a78641d5689722ecc9671c6f02) - **style:** add missing spaces around parentheses _(by Philipp Burckhardt)_
 -   [`2faaf21`](https://github.com/stdlib-js/stdlib/commit/2faaf217eab865f9e40abbb0bf21b374595853e9) - **docs:** fix example _(by Athan Reines)_
 -   [`8d3352e`](https://github.com/stdlib-js/stdlib/commit/8d3352e666353624f97e95ee0805b7d641fc775a) - **fix:** add missing property _(by Athan Reines)_
