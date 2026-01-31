@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@v0.3.1-esm/index.mjs';
 ```
 
 <a name="constructor"></a>
@@ -2568,7 +2568,7 @@ var im = imag( z );
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@esm/index.mjs';
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@v0.3.1-esm/index.mjs';
 
 // Create a complex array by specifying a length:
 var out = new Complex128Array( 3 );
