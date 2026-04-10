@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-complex128
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-Complex128Array = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var Complex128Array = require( 'path/to/vendor/umd/array-complex128/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.Complex128Array;
-})();
-</script>
+var Complex128Array = require( '@stdlib/array-complex128' );
 ```
 
 <a name="constructor"></a>
@@ -321,8 +315,6 @@ The iterator returned by an iterable must return either a complex number or an a
 ```javascript
 var ITERATOR_SYMBOL = require( '@stdlib/symbol-iterator' );
 var Float64Array = require( '@stdlib/array-float64' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var iter;
 var arr;
@@ -370,13 +362,7 @@ if ( ITERATOR_SYMBOL === null ) {
     // returns 2
 
     z = arr.get( 0 );
-    // returns <Complex128>
-
-    re = real( z );
-    // returns 1.0
-
-    im = imag( z );
-    // returns -1.0
+    // returns <Complex128>[ 1.0, -1.0 ]
 }
 ```
 
@@ -402,13 +388,7 @@ var len = arr.length;
 // returns 1
 
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 ```
 
 or an array-like object containing real and imaginary components
@@ -442,22 +422,10 @@ var len = arr.length;
 // returns 2
 
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 
 z = arr.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 4.0
-
-im = imag( z );
-// returns -4.0
+// returns <Complex128>[ 4.0, -4.0 ]
 ```
 
 If `src` is an array-like object containing interleaved real and imaginary components, the callback is invoked for each component and should return the transformed component value.
@@ -465,8 +433,6 @@ If `src` is an array-like object containing interleaved real and imaginary compo
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 function map( v ) {
     return v * 2.0;
@@ -483,13 +449,7 @@ var len = arr.length;
 // returns 1
 
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 ```
 
 A callback function is provided two arguments:
@@ -560,9 +520,6 @@ len = arr.length;
 Returns an array element located at integer position (index) `i`, with support for both nonnegative and negative integer positions.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( 10 );
 
 // Set the first, second, and last elements:
@@ -572,23 +529,11 @@ arr.set( [ 9.0, -9.0 ], 9 );
 
 // Get the first element:
 var z = arr.at( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 
 // Get the last element:
 z = arr.at( -1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 9.0
-
-im = imag( z );
-// returns -9.0
+// returns <Complex128>[ 9.0, -9.0 ]
 ```
 
 If provided an out-of-bounds index, the method returns `undefined`.
@@ -611,8 +556,6 @@ Copies a sequence of elements within the array starting at `start` and ending at
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 4 );
 
@@ -624,54 +567,28 @@ arr.set( new Complex128( 4.0, -4.0 ), 3 );
 
 // Get the first array element:
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 
 // Get the second array element:
 z = arr.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 
 // Copy the last two elements to the first two elements:
 arr.copyWithin( 0, 2 );
 
 // Get the first array element:
 z = arr.get( 0 );
-// returns <Complex128>
-
-re = real( z );
-// returns 3.0
-
-im = imag( z );
-// returns -3.0
+// returns <Complex128>[ 3.0, -3.0 ]
 
 // Get the second array element:
 z = arr.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 4.0
-
-im = imag( z );
-// returns -4.0
+// returns <Complex128>[ 4.0, -4.0 ]
 ```
 
 By default, `end` equals the number of array elements (i.e., one more than the last array index). To limit the sequence length, provide an `end` argument.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 4 );
 
@@ -683,54 +600,28 @@ arr.set( new Complex128( 4.0, -4.0 ), 3 );
 
 // Get the third array element:
 var z = arr.get( 2 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns -3.0
+// returns <Complex128>[ 3.0, -3.0 ]
 
 // Get the last array element:
 z = arr.get( 3 );
-// returns <Complex128>
-
-re = real( z );
-// returns 4.0
-
-im = imag( z );
-// returns -4.0
+// returns <Complex128>[ 4.0, -4.0 ]
 
 // Copy the first two elements to the last two elements:
 arr.copyWithin( 2, 0, 2 );
 
 // Get the third array element:
 z = arr.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 
 // Get the last array element:
 z = arr.get( 3 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 ```
 
 When a `target`, `start`, and/or `end` index is negative, the respective index is determined relative to the last array element. The following example achieves the same behavior as the previous example:
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 4 );
 
@@ -742,46 +633,22 @@ arr.set( new Complex128( 4.0, -4.0 ), 3 );
 
 // Get the third array element:
 var z = arr.get( 2 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns -3.0
+// returns <Complex128>[ 3.0, -3.0 ]
 
 // Get the last array element:
 z = arr.get( 3 );
-// returns <Complex128>
-
-re = real( z );
-// returns 4.0
-
-im = imag( z );
-// returns -4.0
+// returns <Complex128>[ 4.0, -4.0 ]
 
 // Copy the first two elements to the last two elements using negative indices:
 arr.copyWithin( -2, -4, -2 );
 
 // Get the third array element:
 z = arr.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 
 // Get the last array element:
 z = arr.get( 3 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 ```
 
 <a name="method-entries"></a>
@@ -792,8 +659,6 @@ Returns an iterator for iterating over array key-value pairs.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = [
     new Complex128( 1.0, -1.0 ),
@@ -807,31 +672,13 @@ var it = arr.entries();
 
 // Iterate over the key-value pairs...
 var v = it.next().value;
-// returns [ 0, <Complex128> ]
-
-var re = real( v[ 1 ] );
-// returns 1.0
-
-var im = imag( v[ 1 ] );
-// returns -1.0
+// returns [ 0, <Complex128>[ 1.0, -1.0 ] ]
 
 v = it.next().value;
-// returns [ 1, <Complex128> ]
-
-re = real( v[ 1 ] );
-// returns 2.0
-
-im = imag( v[ 1 ] );
-// returns -2.0
+// returns [ 1, <Complex128>[ 2.0, -2.0 ] ]
 
 v = it.next().value;
-// returns [ 2, <Complex128> ]
-
-re = real( v[ 1 ] );
-// returns 3.0
-
-im = imag( v[ 1 ] );
-// returns -3.0
+// returns [ 2, <Complex128>[ 3.0, -3.0 ] ]
 
 var bool = it.next().done;
 // returns true
@@ -903,8 +750,6 @@ Returns a modified typed array filled with a fill value.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 3 );
 
@@ -912,72 +757,34 @@ var arr = new Complex128Array( 3 );
 arr.fill( new Complex128( 1.0, 1.0 ) );
 
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns 1.0
+// returns <Complex128>[ 1.0, 1.0 ]
 
 z = arr.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns 1.0
+// returns <Complex128>[ 1.0, 1.0 ]
 
 // Fill all elements starting from the second element:
 arr.fill( new Complex128( 2.0, 2.0 ), 1 );
 
 z = arr.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns 2.0
+// returns <Complex128>[ 2.0, 2.0 ]
 
 z = arr.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns 2.0
+// returns <Complex128>[ 2.0, 2.0 ]
 
 // Fill all elements from first element until the second-to-last element:
 arr.fill( new Complex128( 3.0, 3.0 ), 0, 2 );
 
 z = arr.get( 0 );
-// returns <Complex128>
-
-re = real( z );
-// returns 3.0
-
-im = imag( z );
-// returns 3.0
+// returns <Complex128>[ 3.0, 3.0 ]
 
 z = arr.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 3.0
-
-im = imag( z );
-// returns 3.0
+// returns <Complex128>[ 3.0, 3.0 ]
 ```
 
 When a `start` and/or `end` index is negative, the respective index is determined relative to the last array element.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 3 );
 
@@ -985,22 +792,10 @@ var arr = new Complex128Array( 3 );
 arr.fill( new Complex128( 1.0, 1.0 ), 0, -1 );
 
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns 1.0
+// returns <Complex128>[ 1.0, 1.0 ]
 
 z = arr.get( arr.length - 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 0.0
-
-im = imag( z );
-// returns 0.0
+// returns <Complex128>[ 0.0, 0.0 ]
 ```
 
 <a name="method-filter"></a>
@@ -1031,13 +826,7 @@ var len = out.length;
 // returns 1
 
 var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns 2.0
+// returns <Complex128>[ 2.0, 2.0 ]
 ```
 
 The `predicate` function is provided three arguments:
@@ -1100,13 +889,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var z = arr.find( predicate );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns 1.0
+// returns <Complex128>[ 1.0, 1.0 ]
 ```
 
 The `predicate` function is provided three arguments:
@@ -1138,13 +921,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var z = arr.find( predicate, context );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns 2.0
+// returns <Complex128>[ 2.0, 2.0 ]
 
 var count = context.count;
 // returns 2
@@ -1232,13 +1009,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var z = arr.findLast( predicate );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 3.0
+// returns <Complex128>[ 3.0, 3.0 ]
 ```
 
 The `predicate` function is provided three arguments:
@@ -1270,13 +1041,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, -3.0 ], 2 );
 
 var z = arr.findLast( predicate, context );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns 2.0
+// returns <Complex128>[ 2.0, 2.0 ]
 
 var count = context.count;
 // returns 2
@@ -2583,16 +2348,11 @@ var im = imag( z );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
+var Float64Array = require( '@stdlib/array-float64' );
+var logEach = require( '@stdlib/console-log-each' );
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 // Create a complex array by specifying a length:
 var out = new Complex128Array( 3 );
@@ -2621,11 +2381,6 @@ logEach( '%s', out );
 arr = new Float64Array( [ 1.0, -1.0, -3.14, 3.14, 0.5, 0.5 ] );
 out = new Complex128Array( arr.buffer, 16, 2 );
 logEach( '%s', out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -2730,17 +2485,17 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [mdn-iterator-protocol]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol
 
-[@stdlib/array/typed]: https://github.com/stdlib-js/array-typed/tree/umd
+[@stdlib/array/typed]: https://github.com/stdlib-js/array-typed
 
-[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer/tree/umd
+[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer
 
-[@stdlib/complex/float64/ctor]: https://github.com/stdlib-js/complex-float64-ctor/tree/umd
+[@stdlib/complex/float64/ctor]: https://github.com/stdlib-js/complex-float64-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/complex/cmplx]: https://github.com/stdlib-js/complex-cmplx/tree/umd
+[@stdlib/complex/cmplx]: https://github.com/stdlib-js/complex-cmplx
 
 <!-- </related-links> -->
 
