@@ -1180,9 +1180,6 @@ var count = context.count;
 Returns an array element located at position (index) `i`.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( 10 );
 
 // Set the first element:
@@ -1190,13 +1187,7 @@ arr.set( [ 1.0, -1.0 ], 0 );
 
 // Get the first element:
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 ```
 
 If provided an out-of-bounds index, the method returns `undefined`.
@@ -1405,16 +1396,7 @@ arr.set( [ 2.0, -2.0 ], 1 );
 arr.set( [ 3.0, -3.0 ], 2 );
 
 var out = arr.map( scale );
-// returns <Complex128Array>
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns -2.0
+// returns <Complex128Array>[ 2.0, -2.0, 4.0, -4.0, 6.0, -6.0 ]
 ```
 
 The callback function is provided three arguments:
@@ -1460,8 +1442,6 @@ var count = context.count;
 Applies a provided callback function to each element of the array, in order, passing in the return value from the calculation on the preceding element and returning the accumulated result upon completion.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 var cadd = require( '@stdlib/complex-float64-base-add' );
 
 var arr = new Complex128Array( 3 );
@@ -1471,13 +1451,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var z = arr.reduce( cadd );
-// returns <Complex128>
-
-var re = real( z );
-// returns 6.0
-
-var im = imag( z );
-// returns 6.0
+// returns <Complex128>[ 6.0, 6.0 ]
 ```
 
 The reducer function is provided four arguments:
@@ -1514,8 +1488,6 @@ var z = arr.reduce( reducer, 0.0 );
 Applies a provided callback function to each element of the array, in reverse order, passing in the return value from the calculation on the following element and returning the accumulated result upon completion.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 var cadd = require( '@stdlib/complex-float64-base-add' );
 
 var arr = new Complex128Array( 3 );
@@ -1525,13 +1497,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var z = arr.reduceRight( cadd );
-// returns <Complex128>
-
-var re = real( z );
-// returns 6.0
-
-var im = imag( z );
-// returns 6.0
+// returns <Complex128>[ 6.0, 6.0 ]
 ```
 
 The reducer function is provided four arguments:
@@ -1568,9 +1534,6 @@ var z = arr.reduceRight( reducer, 0.0 );
 Reverses an array in-place.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( 3 );
 
 arr.set( [ 1.0, 1.0 ], 0 );
@@ -1578,34 +1541,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var out = arr.reverse();
-// returns <Complex128Array>
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 3.0
-
-z = out.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns 2.0
-
-z = out.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns 1.0
+// returns <Complex128Array>[ 3.0, 3.0, 2.0, 2.0, 1.0, 1.0 ]
 ```
 
 <a name="method-set"></a>
@@ -1616,74 +1552,44 @@ Sets one or more array elements.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
 // Get the first element:
 var z = arr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 0.0
-
-var im = imag( z );
-// returns 0.0
+// returns <Complex128>[ 0.0, 0.0 ]
 
 // Set the first element:
 arr.set( new Complex128( 1.0, -1.0 ) );
 
 // Get the first element:
 z = arr.get( 0 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 ```
 
 By default, the method sets array elements starting at position (index) `i = 0`. To set elements starting elsewhere in the array, provide an index argument `i`.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
 // Get the fifth element:
 var z = arr.get( 4 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 0.0
-
-var im = imag( z );
-// returns 0.0
+// returns <Complex128>[ 0.0, 0.0 ]
 
 // Set the fifth element:
 arr.set( new Complex128( 1.0, -1.0 ), 4 );
 
 // Get the fifth element:
 z = arr.get( 4 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 ```
 
 In addition to providing a complex number, to set one or more array elements, provide an array-like object containing either complex numbers
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1699,21 +1605,13 @@ arr.set( buf, 4 );
 
 // Get the sixth element:
 var z = arr.get( 5 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 ```
 
 or interleaved real and imaginary components
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 
 var arr = new Complex128Array( 10 );
 
@@ -1725,13 +1623,7 @@ arr.set( buf, 4 );
 
 // Get the sixth element:
 var z = arr.get( 5 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 2.0
-
-var im = imag( z );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 ```
 
 A few notes:
@@ -1747,91 +1639,37 @@ A few notes:
 Copies a portion of a typed array to a new typed array.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
 var out = arr.slice();
-// returns <Complex128Array>
+// returns <Complex128Array>[ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ]
 
 var len = out.length;
 // returns 4
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns 2.0
-
-z = out.get( len-1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 7.0
-
-im = imag( z );
-// returns 8.0
 ```
 
 By default, the method returns a typed array beginning with the first array element. To specify an alternative array index at which to begin, provide a `start` index (inclusive).
 
 ```javascript
-var imag = require( '@stdlib/complex-float64-imag' );
-var real = require( '@stdlib/complex-float64-real' );
-
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
 var out = arr.slice( 1 );
-// returns <Complex128Array>
+// returns <Complex128Array>[ 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ]
 
 var len = out.length;
 // returns 3
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 4.0
 ```
 
 By default, the method returns a typed array which includes all array elements after `start`. To limit the number of array elements after `start`, provide an `end` index (exclusive).
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
 var out = arr.slice( 1, -1 );
-// returns <Complex128Array>
+// returns <Complex128Array>[ 3.0, 4.0, 5.0, 6.0 ]
 
 var len = out.length;
 // returns 2
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 4.0
-
-z = out.get( len-1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 5.0
-
-im = imag( z );
-// returns 6.0
 ```
 
 <a name="method-some"></a>
@@ -1936,34 +1774,7 @@ arr.set( [ 1.0, -1.0 ], 1 );
 arr.set( [ 2.0, -2.0 ], 2 );
 
 var out = arr.sort( compare );
-// returns <Complex128Array>
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns -1.0
-
-z = out.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns -2.0
-
-z = out.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 3.0
-
-im = imag( z );
-// returns -3.0
+// returns <Complex128Array>[ 1.0, -1.0, 2.0, -2.0, 3.0, -3.0 ]
 ```
 
 The `compareFcn` determines the order of the elements. The function is called with the following arguments:
@@ -1986,91 +1797,37 @@ In contrast to real numbers, one cannot define a default order relation which is
 Creates a new typed array view over the same underlying [`ArrayBuffer`][@stdlib/array/buffer] and with the same underlying data type as the host array.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
 var subarr = arr.subarray();
-// returns <Complex128Array>
+// returns <Complex128Array>[ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ]
 
 var len = subarr.length;
 // returns 4
-
-var z = subarr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns 2.0
-
-z = subarr.get( len-1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 7.0
-
-im = imag( z );
-// returns 8.0
 ```
 
 By default, the method creates a typed array view beginning with the first array element. To specify an alternative array index at which to begin, provide a `begin` index (inclusive).
 
 ```javascript
-var imag = require( '@stdlib/complex-float64-imag' );
-var real = require( '@stdlib/complex-float64-real' );
-
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
 var subarr = arr.subarray( 1 );
-// returns <Complex128Array>
+// returns <Complex128Array>[ 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ]
 
 var len = subarr.length;
 // returns 3
-
-var z = subarr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 4.0
 ```
 
 By default, the method creates a typed array view which includes all array elements after `begin`. To limit the number of array elements after `begin`, provide an `end` index (exclusive).
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 
 var subarr = arr.subarray( 1, -1 );
-// returns <Complex128Array>
+// returns <Complex128Array>[ 3.0, 4.0, 5.0, 6.0 ]
 
 var len = subarr.length;
 // returns 2
-
-var z = subarr.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 4.0
-
-z = subarr.get( len-1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 5.0
-
-im = imag( z );
-// returns 6.0
 ```
 
 <a name="method-to-locale-string"></a>
@@ -2101,9 +1858,6 @@ The method supports the following arguments:
 Returns a new typed array containing the elements in reversed order.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
-
 var arr = new Complex128Array( 3 );
 
 arr.set( [ 1.0, 1.0 ], 0 );
@@ -2111,34 +1865,7 @@ arr.set( [ 2.0, 2.0 ], 1 );
 arr.set( [ 3.0, 3.0 ], 2 );
 
 var out = arr.toReversed();
-// returns <Complex128Array>
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 3.0
-
-var im = imag( z );
-// returns 3.0
-
-z = out.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns 2.0
-
-z = out.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 1.0
-
-im = imag( z );
-// returns 1.0
+// returns <Complex128Array>[ 3.0, 3.0, 2.0, 2.0, 1.0, 1.0 ]
 ```
 
 <a name="method-to-sorted"></a>
@@ -2182,34 +1909,7 @@ arr.set( [ 1.0, -1.0 ], 1 );
 arr.set( [ 2.0, -2.0 ], 2 );
 
 var out = arr.toSorted( compare );
-// returns <Complex128Array>
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 1.0
-
-var im = imag( z );
-// returns -1.0
-
-z = out.get( 1 );
-// returns <Complex128>
-
-re = real( z );
-// returns 2.0
-
-im = imag( z );
-// returns -2.0
-
-z = out.get( 2 );
-// returns <Complex128>
-
-re = real( z );
-// returns 3.0
-
-im = imag( z );
-// returns -3.0
+// returns <Complex128Array>[ 1.0, -1.0, 2.0, -2.0, 3.0, -3.0 ]
 ```
 
 The `compareFcn` determines the order of the elements. The function is called with the following arguments:
@@ -2249,8 +1949,6 @@ var str = arr.toString();
 Returns an iterator for iterating over each value in a typed array.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 var arr = new Complex128Array( 2 );
 
 arr.set( [ 1.0, -1.0 ], 0 );
@@ -2259,22 +1957,10 @@ arr.set( [ 2.0, -2.0 ], 1 );
 var iter = arr.values();
 
 var v = iter.next().value;
-// returns <Complex128>
-
-var re = real( v );
-// returns 1.0
-
-var im = imag( v );
-// returns -1.0
+// returns <Complex128>[ 1.0, -1.0 ]
 
 v = iter.next().value;
-// returns <Complex128>
-
-re = real( v );
-// returns 2.0
-
-im = imag( v );
-// returns -2.0
+// returns <Complex128>[ 2.0, -2.0 ]
 
 var bool = iter.next().done;
 // returns true
@@ -2292,27 +1978,16 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 Returns a new typed array with the element at a provided index replaced with a provided value.
 
 ```javascript
-var real = require( '@stdlib/complex-float64-real' );
-var imag = require( '@stdlib/complex-float64-imag' );
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var arr = new Complex128Array( 3 );
 
 arr.set( [ 1.0, 1.0 ], 0 );
 arr.set( [ 2.0, 2.0 ], 1 );
-arr.set( [ 3.0, 3.0 ], 1 );
+arr.set( [ 3.0, 3.0 ], 2 );
 
 var out = arr.with( 0, new Complex128( 4.0, 4.0 ) );
-// returns <Complex128Array>
-
-var z = out.get( 0 );
-// returns <Complex128>
-
-var re = real( z );
-// returns 4.0
-
-var im = imag( z );
-// returns 4.0
+// returns <Complex128Array>[ 4.0, 4.0, 2.0, 2.0, 3.0, 3.0 ]
 ```
 
 </section>

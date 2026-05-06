@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-10)
+## Unreleased (2026-05-06)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`ccec3e4`](https://github.com/stdlib-js/stdlib/commit/ccec3e43076042d67dbaa814e5140c10f1b85b58) - **docs:** improve doctests for complex number instances in `array/complex128` [(#11973)](https://github.com/stdlib-js/stdlib/pull/11973) _(by Karan Anand)_
 -   [`08624f9`](https://github.com/stdlib-js/stdlib/commit/08624f9135cd19871865ea671a232f4d3149e639) - **docs:** improve doctests for complex number instances in `array/complex128` [(#10718)](https://github.com/stdlib-js/stdlib/pull/10718) _(by Aniket Sonawane, Athan Reines, stdlib-bot)_
 -   [`e1fa36c`](https://github.com/stdlib-js/stdlib/commit/e1fa36c2e0773845bab939eb700d3ee665a5cec9) - **bench:** refactor to use string interpolation in `array/complex128` [(#10301)](https://github.com/stdlib-js/stdlib/pull/10301) _(by Shubham)_
 
@@ -25,10 +26,11 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Aniket Sonawane
 -   Athan Reines
+-   Karan Anand
 -   Shubham
 
 </section>
