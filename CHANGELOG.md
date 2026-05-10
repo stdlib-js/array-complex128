@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`7ae30c3`](https://github.com/stdlib-js/stdlib/commit/7ae30c37a2db6298fc32bcfce8e52db8e940d1e5) - **docs:** improve doctests for complex number typed arrays in `array/complex128` [(#12071)](https://github.com/stdlib-js/stdlib/pull/12071) _(by Karan Anand)_
 -   [`32af5b8`](https://github.com/stdlib-js/stdlib/commit/32af5b8558638f4e0a35432fb355affd8bce097d) - **test:** fix `Complex128` import in `array/complex128` [(#12064)](https://github.com/stdlib-js/stdlib/pull/12064) _(by Karan Anand)_
 -   [`ccec3e4`](https://github.com/stdlib-js/stdlib/commit/ccec3e43076042d67dbaa814e5140c10f1b85b58) - **docs:** improve doctests for complex number instances in `array/complex128` [(#11973)](https://github.com/stdlib-js/stdlib/pull/11973) _(by Karan Anand)_
 -   [`08624f9`](https://github.com/stdlib-js/stdlib/commit/08624f9135cd19871865ea671a232f4d3149e639) - **docs:** improve doctests for complex number instances in `array/complex128` [(#10718)](https://github.com/stdlib-js/stdlib/pull/10718) _(by Aniket Sonawane, Athan Reines, stdlib-bot)_
