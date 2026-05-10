@@ -80,7 +80,6 @@
     "@stdlib/assert-is-iterator-like": "^0.2.3",
     "@stdlib/assert-is-negative-zero": "^0.2.3",
     "@stdlib/assert-is-positive-zero": "^0.2.3",
-    "@stdlib/complex-float32-ctor": "^0.1.1",
     "@stdlib/complex-float32-imag": "^0.1.2",
     "@stdlib/complex-float32-real": "^0.1.2",
     "@stdlib/complex-float64-base-add": "^0.2.1",
