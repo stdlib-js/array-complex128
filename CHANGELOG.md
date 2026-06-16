@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-10)
+## Unreleased (2026-06-16)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`3901886`](https://github.com/stdlib-js/stdlib/commit/3901886ff5ff6bdbcfd65ea52109fee0b0e1ff03) - **docs:** fix examples and descriptions in top-level `array` declarations [(#12375)](https://github.com/stdlib-js/stdlib/pull/12375) _(by Philipp Burckhardt, Athan Reines)_
 -   [`7ae30c3`](https://github.com/stdlib-js/stdlib/commit/7ae30c37a2db6298fc32bcfce8e52db8e940d1e5) - **docs:** improve doctests for complex number typed arrays in `array/complex128` [(#12071)](https://github.com/stdlib-js/stdlib/pull/12071) _(by Karan Anand)_
 -   [`32af5b8`](https://github.com/stdlib-js/stdlib/commit/32af5b8558638f4e0a35432fb355affd8bce097d) - **test:** fix `Complex128` import in `array/complex128` [(#12064)](https://github.com/stdlib-js/stdlib/pull/12064) _(by Karan Anand)_
 -   [`ccec3e4`](https://github.com/stdlib-js/stdlib/commit/ccec3e43076042d67dbaa814e5140c10f1b85b58) - **docs:** improve doctests for complex number instances in `array/complex128` [(#11973)](https://github.com/stdlib-js/stdlib/pull/11973) _(by Karan Anand)_
@@ -28,11 +29,12 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Aniket Sonawane
 -   Athan Reines
 -   Karan Anand
+-   Philipp Burckhardt
 -   Shubham
 
 </section>
