@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-22)
+## Unreleased (2026-07-03)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`b71a63d`](https://github.com/stdlib-js/stdlib/commit/b71a63d212d3943412faa229884d0ee56ee429da) - **style:** remove stray spaces [(#13248)](https://github.com/stdlib-js/stdlib/pull/13248) _(by Philipp Burckhardt)_
 -   [`3901886`](https://github.com/stdlib-js/stdlib/commit/3901886ff5ff6bdbcfd65ea52109fee0b0e1ff03) - **docs:** fix examples and descriptions in top-level `array` declarations [(#12375)](https://github.com/stdlib-js/stdlib/pull/12375) _(by Philipp Burckhardt, Athan Reines)_
 -   [`7ae30c3`](https://github.com/stdlib-js/stdlib/commit/7ae30c37a2db6298fc32bcfce8e52db8e940d1e5) - **docs:** improve doctests for complex number typed arrays in `array/complex128` [(#12071)](https://github.com/stdlib-js/stdlib/pull/12071) _(by Karan Anand)_
 -   [`32af5b8`](https://github.com/stdlib-js/stdlib/commit/32af5b8558638f4e0a35432fb355affd8bce097d) - **test:** fix `Complex128` import in `array/complex128` [(#12064)](https://github.com/stdlib-js/stdlib/pull/12064) _(by Karan Anand)_
