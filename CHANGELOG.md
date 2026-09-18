@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-10)
+## Unreleased (2026-09-18)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`5a4f246`](https://github.com/stdlib-js/stdlib/commit/5a4f246b10955fa9b744fcb099dfdf1192675a90) - **docs:** update related packages sections [(#15311)](https://github.com/stdlib-js/stdlib/pull/15311) _(by stdlib-bot)_
 -   [`075283f`](https://github.com/stdlib-js/stdlib/commit/075283f8cdb22dd49286c6fa7ddc874b584af48d) - **bench:** reassign variable _(by Athan Reines)_
 -   [`d47c19d`](https://github.com/stdlib-js/stdlib/commit/d47c19dbaa8eaae1e440307c9b4b6727f227fa07) - **bench:** add `copyWithin` benchmarks _(by Athan Reines)_
 -   [`10ee0a5`](https://github.com/stdlib-js/stdlib/commit/10ee0a56ed60ae3d051ff0426b8e203a29c44cdc) - **chore:** clean-up [(#13754)](https://github.com/stdlib-js/stdlib/pull/13754) _(by Philipp Burckhardt)_
